@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+/* Importing Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* General Styles */
+
+body {
+    margin: 0;
+    padding: 60px 10px 10px 10px;
+    /* Reduced top padding for tighter layout */
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    /* Updated to a modern font */
+    line-height: 1.6;
+    /* Increased line-height for better readability */
+    background-color: #f9f9f9;
+    /* Light background for a cleaner look */
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: 0 3rem;
+}
+
+.section-content {
+    display: flex;
+}
+
+
+/* Navbar Styles */
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(139, 139, 139, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.navbar-nav a:hover,
+.navbar-nav a:focus {
+    color: #007BFF;
+    /* Accent color on hover */
+    border-bottom: 2px solid #007BFF;
+    outline: none;
+    /* Remove default outline */
+}
+
+
+/* Row and Column Layout */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Added gap for even spacing */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* Center the content */
+}
+
+.col {
+    flex: 1 1 100%;
+    min-height: 100px;
+}
+
+@media (min-width: 768px) {
+    .col {
+        flex: 1 1 45%;
+        /* Two columns on larger screens */
+    }
+}
+
+
+/* Image Styling */
+
+.col-img,
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 400px;
+    border-radius: 8px;
+    /* Rounded corners for images */
+}
+
+
+/* Card Styles */
+
+.card,
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    /* Center alignment like taxiCAB */
+    width: 300px;
+    margin: 20px auto;
+    /* Center the card */
+    display: flex;
+    flex-direction: column;
+    /* Arrange items vertically */
+    align-items: center;
+    /* Vertically align content */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-container {
+    width: 100%;
+    height: 200px;
+    /* Ensures the container is square */
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: auto;
+    /* Centers the image container in the card */
+    position: relative;
+    background-color: #ddd;
+    /* Fallback background */
+}
+
+.card-img-container img {
+    position: absolute;
+    /* Allows for precise positioning */
+    /* Centers the oversized image within the 200px container */
+    object-fit: cover;
+    width: 280px;
+    top: -10px;
+    left: -10px;
+    /* Ensures the image scales correctly */
+}
+
+.card-title-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 10px 20px;
+}
+
+.card-content p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em;
+}
+
+
+/* Modal Styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    /* Center modal vertically */
+    justify-content: center;
+    /* Center modal horizontally */
+}
+
+.modal-title {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* Accessibility Enhancements */
+
+a:focus,
+button:focus {
+    outline: 2px dashed #007BFF;
+    outline-offset: 4px;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    .container {
+        margin: 0 1.5rem;
+    }
+    .card {
+        max-width: 100%;
+    }
+}
