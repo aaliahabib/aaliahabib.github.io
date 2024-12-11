@@ -11,91 +11,119 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
+<!-- Navigation-->
 
-<body id="page-left">
-    <!-- About section-->
-    <section id="about">
-        <header class="container px-4">
-            <div class="row justify-content-center">
+<div id="custom-modal" class="modal" data-modal-title="Default Title" data-modal-content="Default content goes here">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 class="modal-title">default</h2>
+        <div class="modal-body"></div>
+    </div>
+</div>
+
+<body>
+    <!-- <nav class="navbar" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#research">research</a></li>
+            <li class="nav-item"><a class="nav-link" href="#teaching">teaching</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">projects</a></li>
+        </ul>
+    </nav> -->
+    <div class="container">
+        <!-- About section-->
+        <section id="about">
+            <div class="row">
                 <div class="col">
-                    <img src="assets/me2.jpg" alt="me">
+                    <img src="assets/me3.png" alt="me" class="col-img">
                 </div>
                 <div class="col">
                     <div class="about-column">
                         <h2>Hi!</h2>
-                        <p class="lead">I'm Aalia! <br> Currently: at Adobe, helping build a new web based video editor <br> Studied: at Brown University <br> Spending my time: cooking, reading, (very) occasionally writing, being a big sister <br> Find me: aalia.habib@gmail.com</p>
+                        <p class="lead">I'm Aalia :) <br> Currently: at Adobe, helping build a new web based video editor <br> Previously: at Brown University, where I studied computer science <br> Spending my time: cooking, reading, writing, being a big sister <br>                            Find me: aalia[ . ]habib[ @ ]gmail[ . ]com</p>
+                        <p> I'm interested in research at the intersection of technology and education - I hope to ensure that the systems we design support learning and curiosity for all.</p>
                     </div>
                 </div>
-
-
             </div>
-        </header>
-    </section>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-left" id="mainNav">
-        <div class="container px-4">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#research">research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#teaching">teaching</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">projects</a></li>
-                </ul>
-            </div>
+        </section>
+        <div class="section">
+            <!-- Research section-->
+            <section class="bg-light" id="research">
+                <h2>research</h2>
+                <p class="lead"> At Brown, I got the opportunity to work with Daniel Ritchie in his graphics lab where I worked with Kenny Jones on two papers related to 3D shape segmentation and decomposition. </p>
+                <p class="lead"> R. Kenny Jones, Aalia Habib, Rana Hanocka, Daniel Ritchie, "The Neurally-Guided Shape Parser: Grammar-based Labeling of 3D Shape Regions with Approximate Inference",
+                    <a class="link" , href="https://rkjones4.github.io/pdf/ngsp.pdf">CVPR 2022</a></p>
+                <p class="lead"> R. Kenny Jones, Aalia Habib, Daniel Ritchie, "SHRED: 3D Shape Region Decomposition with Learned Local Operations", <a class="link" , href="https://rkjones4.github.io/pdf/shred.pdf">SIGGRAPH Asia 2022</a></p>
+            </section>
         </div>
-    </nav>
-    <!-- Research section-->
-    <section class="bg-light" id="research">
-        <div class="container px-4">
-            <div class="row gx-4 justify-content-center">
-                <div class="col-lg-8">
-                    <h2>research</h2>
-                    <p class="lead"> At Brown, I got the opportunity to work with Daniel Ritchie in his graphics lab where I worked with Kenny Jones on two papers related to 3D shape segmentation and decomposition. </p>
-
-                    <div class="row justify-content-center">
-                        <div class="col">
-                            <div class="button-container"> </div>
+        <!-- Teaching section-->
+        <div class="section">
+            <section id="teaching">
+                <h2>teaching</h2>
+                <div class="section-content">
+                    <div class="card" data-title="TAing">
+                        <div class="card-img-container">
+                            <img src="assets/cs15.png" alt="taing" class="card-img">
                         </div>
-                        <div class="col">
+                        <div class="card-content">
+                            <h3 class="card-title">TA-ing</h3>
                         </div>
-
                     </div>
-                    <p class="lead"> R. Kenny Jones, Aalia Habib, Rana Hanocka, Daniel Ritchie, "The Neurally-Guided Shape Parser: Grammar-based Labeling of 3D Shape Regions with Approximate Inference",
-                        <a class="link" , href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://rkjones4.github.io/pdf/ngsp.pdf">CVPR 2022</a></p>
-                    <p class="lead"> R. Kenny Jones, Aalia Habib, Daniel Ritchie, "SHRED: 3D Shape Region Decomposition with Learned Local Operations", <a class="link" , href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://rkjones4.github.io/pdf/shred.pdf">SIGGRAPH Asia 2022</a></p>
 
+                    <div class="card" data-title="TAing">
+                        <div class="card-img-container">
+                            <img src="assets/scitoons.jpg" alt="scitoons" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">scitoons</h3>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-    <!-- Teaching section-->
-    <section id="teaching">
-        <div class="container px-4">
-            <div class="row gx-4 justify-content-center">
-                <div class="col-lg-8">
-                    <h2>teaching</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Projects section-->
-    <section class="bg-light" id="projects">
-        <div class="container px-4">
-            <div class="row gx-4 justify-content-center">
-                <div class="col-lg-8">
+        <!--Projects section-->
+        <div class="section">
+            <section class="bg-light" id="projects">
+                <div class="col">
                     <h2>projects</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" data-title="animate-from-audio">
+                                <img src="assets/animate-from-audio.png" alt="afa" class="card-img">
+                                <div class="card-content">
+                                    <h3 class="card-title">Snow Simulation</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" data-title="taxi-cab">
+                                <img src="assets/taxicab.png" alt="tc" class="card-img">
+                                <div class="card-content">
+                                    <h3 class="card-title">Cloth Simulation</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" data-title="cloth-sim">
+                                <img src="assets/cloth.png" alt="c" class="card-img">
+                                <div class="card-content">
+                                    <h3 class="card-title">Image Relighting</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" data-title="snow-sim">
+                                <img src="assets/snow.png" alt="s" class="card-img">
+                                <div class="card-content">
+                                    <h3 class="card-title">Image Relighting</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
     <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container px-4">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
-        </div>
-    </footer>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
 </body>
