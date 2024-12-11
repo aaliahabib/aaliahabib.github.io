@@ -31,6 +31,10 @@ p {
     margin: 0 3rem;
 }
 
+.section-content {
+    display: flex;
+}
+
 
 /* Navbar Styles */
 
@@ -139,11 +143,29 @@ p {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-.card-img-container img {
+.card-img-container {
     width: 100%;
-    height: auto;
-    /* Adjust to maintain aspect ratio */
-    border-bottom: 2px solid #ddd;
+    height: 200px;
+    /* Ensures the container is square */
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: auto;
+    /* Centers the image container in the card */
+    position: relative;
+    background-color: #ddd;
+    /* Fallback background */
+}
+
+.card-img-container img {
+    position: absolute;
+    /* Allows for precise positioning */
+    /* Centers the oversized image within the 200px container */
+    object-fit: cover;
+    width: 280px;
+    top: -10px;
+    left: -10px;
+    /* Ensures the image scales correctly */
 }
 
 .card-title-container {
