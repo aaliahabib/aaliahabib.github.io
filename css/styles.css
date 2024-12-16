@@ -35,6 +35,10 @@ p {
     display: flex;
 }
 
+.section-heading {
+    margin-bottom: 1px;
+}
+
 
 /* Navbar Styles */
 
@@ -118,7 +122,25 @@ p {
 
 /* Card Styles */
 
-.card,
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    /* Center alignment like taxiCAB */
+    width: 300px;
+    margin: 20px auto;
+    /* Center the card */
+    display: flex;
+    flex-direction: column;
+    /* Arrange items vertically */
+    align-items: center;
+    /* Vertically align content */
+}
+
 .project-card {
     background-color: #fff;
     border-radius: 8px;
@@ -146,10 +168,7 @@ p {
 .card-img-container {
     width: 100%;
     height: 200px;
-    /* Ensures the container is square */
-    padding: 5px;
     overflow: hidden;
-    border-radius: 8px;
     margin: auto;
     /* Centers the image container in the card */
     position: relative;
@@ -159,13 +178,9 @@ p {
 
 .card-img-container img {
     position: absolute;
-    /* Allows for precise positioning */
-    /* Centers the oversized image within the 200px container */
     object-fit: cover;
-    width: 280px;
-    top: -10px;
+    width: 240px;
     left: -10px;
-    /* Ensures the image scales correctly */
 }
 
 .card-title-container {
@@ -178,17 +193,29 @@ p {
     font-size: 1.2em;
     margin: 0;
     color: #333;
-    font-weight: bold;
 }
 
 .card-content {
     padding: 10px 20px;
 }
 
-.card-content p {
-    margin: 0;
-    color: #555;
-    font-size: 0.9em;
+
+/* Small-sized version of cards */
+
+.card-small {
+    width: 220px;
+    /* Smaller width */
+    margin: 15px auto;
+}
+
+.card-small .card-img-container {
+    height: 150px;
+    /* Smaller height for image container */
+}
+
+.card-small .card-title {
+    font-size: 1em;
+    /* Slightly smaller font size */
 }
 
 
@@ -214,20 +241,22 @@ p {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 30px;
     border-radius: 8px;
     width: 90%;
-    max-width: 600px;
+    max-width: 700px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     position: relative;
     text-align: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .close-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 10px;
+    right: 25px;
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
@@ -240,6 +269,14 @@ p {
     color: #000;
     text-decoration: none;
     outline: none;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 
